@@ -6,8 +6,8 @@ $(document).ready(function () {
         const listaTarefa = $('#nome-tarefa').val();
         const novaTarefa = $('<li></li>');
 
-        $(novaTarefa).appendto('${listaTarefa}');
-        $('ul').appendTo(novaTarefa);
+        $(novaTarefa).appendTo(`${listaTarefa}`);
+        $('ul').append(novaTarefa);
 
         $("li").click(function () {
             $(this).addClass("riscado");
