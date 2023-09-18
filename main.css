@@ -8,6 +8,8 @@
 
 body {
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -26,6 +28,7 @@ form {
     background-color: rgb(199, 199, 143);
     margin: 16px 0;
     padding: 24px 0;
+    
 }
 
 input {
@@ -46,12 +49,19 @@ button {
 ul {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    /*justify-items: center;*/
+    align-items: center;
+    
 }
 
 ul li {
-    max-width: 25%;
-    list-style: none;
-    position: relative;
-    max-height: 280px;
-    overflow-y: hidden;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.linhas {
+    text-decoration: line-through;
 }

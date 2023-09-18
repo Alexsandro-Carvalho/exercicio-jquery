@@ -4,15 +4,23 @@ $(document).ready(function () {
         e.preventDefault();
 
         const listaTarefa = $('#nome-tarefa').val();
-        const novaTarefa = $('<li></li>');
+        const novaTarefa = $('<li></li>').text(listaTarefa);
+        
 
-        $(novaTarefa).appendTo(`${listaTarefa}`);
+        //$(novaTarefa).append(`${listaTarefa}`);
         $('ul').append(novaTarefa);
 
-        $("li").click(function () {
-            $(this).addClass("riscado");
-        });
         $('#nome-tarefa').val("");
-        console.log('submit')
+    });
+        //$('li').on('click', 'li', function () {
+        //    $(this).addClass(".linhas");
+        //});
+        //$('#nome-tarefa').val("");
+        
+    //})
+    //const texto = document.getElementById("seuElemento");
+    //texto.style.borderBottom = "1px dashed black";
+    $('ul').on('click', 'li', function (){
+        $(this).toggleClass("linhas");
     })
 })
